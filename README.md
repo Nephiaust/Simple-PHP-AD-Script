@@ -15,6 +15,8 @@ All the documentation assumes dc1.domain.com is your Active Directory DC and als
 2. In the JSON file, specify the username & new password
 
 # Windows NOTES
+NOTE: You will require your AD domain controller to have a SSL certificate to enable LDAPs. See Google for more help
+
 1. Install XAMPP with Apache, PHP, and sendmail
 2. Copy the following files to `%WINDIR%\System32` directory
 ```
