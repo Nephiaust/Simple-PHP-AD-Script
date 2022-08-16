@@ -34,12 +34,16 @@ function MyLDAP($username, $newPassword) {
         $user = ldap_get_entries($LDAPConnection, $SearchResults);
         $UserDN = $user[0]["dn"];
 
+/*      # Manual method to convert string from UTF-8 to UTF-16LE
         $newPassword = "\"" . $newPassword . "\"";
         $newPasswordLength = strlen($newPassword);
         $MyNewPassword = "";
         for($i=0;$i<$newPasswordLength;$i++){
             $MyNewPassword .= "{$newPassword[$i]}\000";
         }
+*/
+        # Convert string from UTF-8 to UTF-16LE
+        $MyNewPassword = iconv('UTF-8','UTF-16LE','"' . $newPassword . '"');
         
         $EncPassword["unicodePwd"] = $MyNewPassword;
          if (false == ldap_mod_replace($LDAPConnection, $UserDN, $EncPassword)) {
