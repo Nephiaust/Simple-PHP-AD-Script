@@ -29,4 +29,4 @@ C:\xampp\php\libsasl.dll
 7. Save the certificate as `cert.pem` (OR just update the file name in ldap.conf)
 
 ## Testing
-See the [test-samples README](test-samples/README.md) for more information
+See the [test-samples](test-samples/) for more information
