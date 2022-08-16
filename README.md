@@ -3,6 +3,11 @@ A simple API script in PHP to update passwords for Active Directory.
 
 All the documentation assumes dc1.domain.com is your Active Directory DC and also where XAMPP is installed.
 
+## Security
+This script has none (other than a basic auth key). The script doesnt validate any user input nor ensures that the data is suitable for publishing to AD.
+
+*** This script is a HACK to get password sync'ing for me at work against an old dying domain that is due to be disposed of. Its not designed for real-life production ***
+
 ## Installation
 1. Download all the files from [here](website/)
 2. Edit the config.php
