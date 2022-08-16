@@ -59,14 +59,14 @@ $app->get('/hello/{name}', function (Request $request, Response $response, array
 
     return $response;
 });
-$app->post('/password/{secretkey}', function (Request $request, Response $response, array $args) {
+$app->post('/password/', function (Request $request, Response $response, array $args) {
     $json = file_get_contents('php://input');
-    $secretkey = $args['secretkey'];
     global $AuthorisationKey;
 
     $NewDetails = json_decode($json);
     $username = $NewDetails->username;
     $password = $NewDetails->password;
+    $secretkey = $NewDetails->AuthKey;
 
     $Attempt = MyLDAP($username, $password);
 
