@@ -5,7 +5,7 @@ These files are designed to test the API system to show it working
 This test uses a sample API to test if all required PHP extras have been installed (via composer install)
 
 1. Open your favourite web browser
-2. Go to http://dc1.domain.local/hello/`NAME`
+2. Go to http://dc1.domain.local/hello/NAME
    * Replace `NAME` with a name
 4. This will give a simple response showing "Hello, `NAME`"
 
