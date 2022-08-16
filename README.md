@@ -2,7 +2,7 @@
 A simple API script in PHP to update passwords for Active Directory.
 
 ## Installation
-1. Download
+1. Download all the files from `website`
 2. Edit the config.php
 3. On the CLI run `composer install`
 4. Ensure your PHP instance has SSL and LDAP enabled
